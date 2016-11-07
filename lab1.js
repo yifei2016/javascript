@@ -31,7 +31,10 @@ let movieObject4 = new Movie("The Legend of Tarzan",2016,"Action, äventyr");
 let movieObject5 = new Movie("Legally Blonde",2001,"Comedy");
 
 
-
+[3,5,2,3,1].forEach(rate => movieObject1.rateMovie(rate));
+[1,1,5,3].forEach(rate => movieObject3.rateMovie(rate));
+[5,4,4,5].forEach(rate => movieObject4.rateMovie(rate));
+[1,1,1,1,1,2,2,2].forEach(rate => movieObject5.rateMovie(rate));
 
 let Database = {
     movieList: [movieObject1,movieObject2, movieObject3,movieObject4,movieObject5 ],
@@ -70,3 +73,5 @@ let Database = {
         return sameGenreMovieArray;
     }
 };
+let best = Database.getBestMovie();
+console.log(best);
