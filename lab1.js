@@ -6,24 +6,20 @@ function Movie(title, year, genre){
     this.rateMovie = function (rate){ 
         this.ratings.push(rate);
     };
-    this.getAverage = function(){
-        if(this.ratings .length===0){
-            return [];
-        } 
-        let sum = this.ratings.reduce((sum,rate) =>{
-            return sum+rate;
-        }, 0);
-            
-        let averageRate = sum/this.ratings.length;
-        return averageRate;
-    };
 }
 
-/*
-Movie.prototype.rateMovie = function(rate) { 
-    this.ratings.push(rate);
+Movie.prototype.getAverage = function(){
+    if(this.ratings .length===0){
+        return [];
+    } 
+    let sum = this.ratings.reduce((sum,rate) =>{
+        return sum+rate;
+    }, 0);
+            
+    let averageRate = sum/this.ratings.length;
+    return averageRate;
 };
-*/
+
 let movieObject1 = new Movie("The Force Awakens",2013,"Scifi");
 let movieObject2 = new Movie("Borat",2007,"Comedy");
 let movieObject3 = new Movie("Frozen",2013,"Familjfilm");
